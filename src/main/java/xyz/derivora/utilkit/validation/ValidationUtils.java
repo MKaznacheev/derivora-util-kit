@@ -32,7 +32,7 @@ import java.util.Objects;
  * <p>
  * This class is not instantiable.
  */
-public class ValidationUtil {
+public class ValidationUtils {
 
     /**
      * The default exception message used when a null object is encountered.
@@ -42,7 +42,7 @@ public class ValidationUtil {
     /**
      * Private constructor to prevent instantiation of this utility class.
      */
-    private ValidationUtil() {
+    private ValidationUtils() {
     }
 
     /**

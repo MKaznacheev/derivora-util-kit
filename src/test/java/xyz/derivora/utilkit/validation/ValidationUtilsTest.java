@@ -21,8 +21,6 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import xyz.derivora.utilkit.validation.ValidationException;
-import xyz.derivora.utilkit.validation.ValidationUtil;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -31,7 +29,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @Tag("xyz/derivora/utilkit/validation")
 @DisplayName("Tests for ValidationUtil")
-class ValidationUtilTest {
+class ValidationUtilsTest {
 
     @Nested
     @Tag("xyz/derivora/utilkit/validation")
@@ -45,7 +43,7 @@ class ValidationUtilTest {
             Object[] objects = null;
             assertThrows(
                     NullPointerException.class,
-                    () -> ValidationUtil.requireAllNonNull(objects)
+                    () -> ValidationUtils.requireAllNonNull(objects)
             );
         }
 
@@ -55,7 +53,7 @@ class ValidationUtilTest {
             String customMessage = "Custom message";
             ValidationException exception = assertThrows(
                     ValidationException.class,
-                    () -> ValidationUtil.requireAllNonNull(customMessage, new Object(), null, new Object())
+                    () -> ValidationUtils.requireAllNonNull(customMessage, new Object(), null, new Object())
             );
             assertEquals(customMessage, exception.getMessage());
         }
@@ -64,7 +62,7 @@ class ValidationUtilTest {
         @DisplayName("Should not throw exception when all elements in the array are non-null")
         void requireAllNonNull_whenAllArrayElementsAreNonNull_shouldNotThrowException() {
             assertDoesNotThrow(
-                    () -> ValidationUtil.requireAllNonNull(new Object(), new Object(), new Object())
+                    () -> ValidationUtils.requireAllNonNull(new Object(), new Object(), new Object())
             );
         }
     }
@@ -81,7 +79,7 @@ class ValidationUtilTest {
             Collection<Object> objects = null;
             assertThrows(
                     NullPointerException.class,
-                    () -> ValidationUtil.requireAllNonNull(objects)
+                    () -> ValidationUtils.requireAllNonNull(objects)
             );
         }
 
@@ -92,7 +90,7 @@ class ValidationUtilTest {
             Collection<Object> objects = Arrays.asList(new Object(), null, new Object());
             ValidationException exception = assertThrows(
                     ValidationException.class,
-                    () -> ValidationUtil.requireAllNonNull(customMessage, objects)
+                    () -> ValidationUtils.requireAllNonNull(customMessage, objects)
             );
             assertEquals(customMessage, exception.getMessage());
         }
@@ -102,7 +100,7 @@ class ValidationUtilTest {
         void requireAllNonNull_whenAllCollectionElementsAreNonNull_shouldNotThrowException() {
             Collection<Object> objects = Arrays.asList(new Object(), new Object(), new Object());
             assertDoesNotThrow(
-                    () -> ValidationUtil.requireAllNonNull(objects)
+                    () -> ValidationUtils.requireAllNonNull(objects)
             );
         }
     }

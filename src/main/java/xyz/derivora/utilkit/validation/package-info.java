@@ -21,7 +21,7 @@
  * <p>This package includes:
  * <ul>
  *   <li>{@link xyz.derivora.utilkit.validation.ValidationException} - Custom exception for validation errors.</li>
- *   <li>{@link xyz.derivora.utilkit.validation.ValidationUtil} - Utility class for common validation operations.</li>
+ *   <li>{@link xyz.derivora.utilkit.validation.ValidationUtils} - Utility class for common validation operations.</li>
  *   <li>{@link xyz.derivora.utilkit.validation.Validator} - Interface for defining custom validation logic.</li>
  * </ul>
  *
