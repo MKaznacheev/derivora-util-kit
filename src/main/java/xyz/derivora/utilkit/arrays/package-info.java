@@ -16,15 +16,20 @@
  */
 
 /**
- * The derivora-util-kit module provides core utilities to support various application-level features.
+ * Provides utility methods for working with arrays.
+ * <p>
+ * The {@code xyz.derivora.utilkit.arrays} package contains classes for performing common array
+ * operations, such as merging arrays with type safety and handling compatibility of component types.
+ * </p>
  *
- * <p>Currently, it includes:
+ * <p>This package includes:</p>
  * <ul>
- *   <li>Array utilities for performing common operations, such as merging arrays with type safety.</li>
- *   <li>Validation utilities for ensuring data integrity and correctness.</li>
+ * <li>{@link xyz.derivora.utilkit.arrays.ArrayUtils} - a utility class for merging arrays and determining common component types.</li>
  * </ul>
+ *
+ * <p>
+ * This package is designed for developers who need robust and reusable utilities for working
+ * with generic arrays in Java.
+ * </p>
  */
-module derivora.util.kit {
-    exports xyz.derivora.utilkit.arrays;
-    exports xyz.derivora.utilkit.validation;
-}
+package xyz.derivora.utilkit.arrays;

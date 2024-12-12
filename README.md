@@ -14,6 +14,7 @@ The project has started active development. Currently, it includes core validati
 
 ## Project Structure
 
+* Package `xyz.derivora.utilkit.arrays offers` utilities for performing common array operations, such as merging arrays with type safety and determining common component types.
 * Package `xyz.derivora.utilkit.validation` provides essential tools for implementing validation logic across the application.
 
 ## License
