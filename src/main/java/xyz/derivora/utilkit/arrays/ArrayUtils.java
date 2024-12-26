@@ -68,7 +68,7 @@ import java.util.stream.Stream;
  * </p>
  *
  */
-public class ArrayUtils {
+public final class ArrayUtils {
 
     /**
      * Private constructor to prevent instantiation of this utility class.
