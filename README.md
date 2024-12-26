@@ -15,6 +15,9 @@ The project has started active development. Currently, it includes core validati
 ## Project Structure
 
 * Package `xyz.derivora.utilkit.arrays offers` utilities for performing common array operations, such as merging arrays with type safety and determining common component types.
+* Package `xyz.derivora.utilkit.lazy` serves as the root package for utilities that facilitate lazy initialization and efficient resource management.
+    * Subpackage `xyz.derivora.utilkit.lazy.value` provides utilities for lazily initialized values, designed for single-threaded environments.
+    * Subpackage `xyz.derivora.utilkit.lazy.singleton` contains tools for managing lazily initialized singleton objects, including both single-threaded and thread-safe implementations.
 * Package `xyz.derivora.utilkit.validation` provides essential tools for implementing validation logic across the application.
 
 ## License

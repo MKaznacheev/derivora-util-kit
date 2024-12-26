@@ -21,10 +21,14 @@
  * <p>Currently, it includes:
  * <ul>
  *   <li>Array utilities for performing common operations, such as merging arrays with type safety.</li>
+ *   <li>Lazy initialization utilities for efficient resource management, including support for
+ *       single-threaded and multithreaded environments.</li>
  *   <li>Validation utilities for ensuring data integrity and correctness.</li>
  * </ul>
  */
 module derivora.util.kit {
     exports xyz.derivora.utilkit.arrays;
+    exports xyz.derivora.utilkit.lazy.singleton;
+    exports xyz.derivora.utilkit.lazy.value;
     exports xyz.derivora.utilkit.validation;
 }
