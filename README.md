@@ -18,6 +18,7 @@ The project has started active development. Currently, it includes core validati
 * Package `xyz.derivora.utilkit.lazy` serves as the root package for utilities that facilitate lazy initialization and efficient resource management.
     * Subpackage `xyz.derivora.utilkit.lazy.value` provides utilities for lazily initialized values, designed for single-threaded environments.
     * Subpackage `xyz.derivora.utilkit.lazy.singleton` contains tools for managing lazily initialized singleton objects, including both single-threaded and thread-safe implementations.
+* Package `xyz.derivora.utilkit.reflection` provides utilities for performing common reflective operations, such as accessing fields and retrieving their values safely.
 * Package `xyz.derivora.utilkit.validation` provides essential tools for implementing validation logic across the application.
 
 ## License
