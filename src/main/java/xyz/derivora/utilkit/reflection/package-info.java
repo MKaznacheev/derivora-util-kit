@@ -23,5 +23,11 @@
  *
  * <p>Designed to simplify reflection-based tasks while handling common pitfalls like
  * accessibility restrictions and type mismatches.
+ *
+ * <h2>Subpackages:</h2>
+ * <ul>
+ *      <li>{@link xyz.derivora.utilkit.reflection.primitives} -
+ *          Utilities for working with primitive types and their wrapper classes.</li>
+ *  </ul>
  */
 package xyz.derivora.utilkit.reflection;

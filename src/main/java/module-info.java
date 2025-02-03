@@ -33,5 +33,6 @@ module derivora.util.kit {
     exports xyz.derivora.utilkit.lazy.singleton;
     exports xyz.derivora.utilkit.lazy.value;
     exports xyz.derivora.utilkit.reflection;
+    exports xyz.derivora.utilkit.reflection.primitives;
     exports xyz.derivora.utilkit.validation;
 }
