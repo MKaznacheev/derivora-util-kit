@@ -33,7 +33,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @Tag("xyz/derivora/utilkit/reflection/primitives")
 @DisplayName("Tests for PrimitiveTypeMapper")
-public class PrimitiveTypeMapperTest extends PrimitiveTypeUtilTest {
+class PrimitiveTypeMapperTest extends PrimitiveTypeUtilTest {
 
     protected PrimitiveTypeMapperTest() {
         super(new PrimitiveTypeMapperAdapter());

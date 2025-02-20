@@ -28,7 +28,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @Tag("xyz/derivora/utilkit/reflection/primitives")
 @DisplayName("Tests for PrimitiveTypeReflector")
-public class PrimitiveTypeReflectorTest extends PrimitiveTypeUtilTest {
+class PrimitiveTypeReflectorTest extends PrimitiveTypeUtilTest {
 
     PrimitiveTypeReflectorTest() {
         super(new PrimitiveTypeReflectorAdapter());
