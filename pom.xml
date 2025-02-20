@@ -11,7 +11,7 @@
     </parent>
 
     <artifactId>derivora-util-kit</artifactId>
-    <version>0.4.0</version>
+    <version>0.5.0</version>
     <packaging>jar</packaging>
     <name>Derivora Util Kit</name>
     <description>A lightweight Java library that provides fundamental programming utilities</description>
