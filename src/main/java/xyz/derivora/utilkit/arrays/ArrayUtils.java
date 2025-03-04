@@ -102,7 +102,7 @@ public final class ArrayUtils {
      * @throws ArrayStoreException if the generator produces an array type incompatible with the element type {@code T}
      * <p>
      */
-    public static <T> T[] merge(T[] firstArray, T[] secondArray, IntFunction<T[]> generator) {
+    public static <T> T[] merge(T[] firstArray, T[] secondArray, ArrayGenerator<T> generator) {
         Objects.requireNonNull(firstArray, "First array cannot be null");
         Objects.requireNonNull(secondArray, "Second array cannot be null");
         Objects.requireNonNull(generator, "Generator cannot be null");
@@ -111,7 +111,7 @@ public final class ArrayUtils {
         Stream<T> secondStream = Arrays.stream(secondArray);
 
         try {
-            return Stream.concat(firstStream, secondStream).toArray(generator);
+            return Stream.concat(firstStream, secondStream).toArray(generator::generate);
         } catch (ArrayStoreException e) {
             throw new ArrayStoreException("Type mismatch: generator produced an incompatible array");
         }
@@ -166,7 +166,7 @@ public final class ArrayUtils {
                 firstArray.length + secondArray.length
         );
 
-        IntFunction<T[]> generator = size -> resultArray;
+        ArrayGenerator<T> generator = size -> resultArray;
         return merge(firstArray, secondArray, generator);
     }
 

@@ -15,22 +15,24 @@
  * along with Derivora Util Kit. If not, see https://www.gnu.org/licenses/lgpl-3.0.html.
  */
 
-/**
- * Provides utility methods for working with arrays.
- * <p>
- * The {@code xyz.derivora.utilkit.arrays} package contains classes for performing common array
- * operations, such as merging arrays with type safety and handling compatibility of component types.
- * </p>
- *
- * <p>This package includes:</p>
- * <ul>
- * <li>{@link xyz.derivora.utilkit.arrays.ArrayUtils} - a utility class for merging arrays and determining common component types.</li>
- * <li>{@link xyz.derivora.utilkit.arrays.ArrayGenerator} - a functional interface for creating arrays of a given length.</li>
- * </ul>
- *
- * <p>
- * This package is designed for developers who need robust and reusable utilities for working
- * with generic arrays in Java.
- * </p>
- */
 package xyz.derivora.utilkit.arrays;
+
+/**
+ * A functional interface for creating arrays of a given length.
+ *
+ * <p>Serves as a concise and readable alternative to {@code IntFunction<T[]>}.</p>
+ *
+ * @param <T> the type of array elements
+ */
+@FunctionalInterface
+public interface ArrayGenerator<T> {
+
+    /**
+     * Creates an array of the specified length.
+     *
+     * @param length the length of the array
+     * @return an array of type {@code T[]} with the given length
+     * @throws NegativeArraySizeException if {@code length} is negative
+     */
+    T[] generate(int length);
+}
